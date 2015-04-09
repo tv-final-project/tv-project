@@ -10,4 +10,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, 'flatironrulz'
   end
 
+  get '/' do
+    erb :index
+  end
 end
