@@ -7,14 +7,14 @@
   </head>
   <body>
     <div class="container-full">
-    <h1> AmazonPrime, Hulu, Netflix Comparison </h1>
+    <h1 style="font-size:50px" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
 
     <h2> Television Shows You Watch: </h2>
-    <form action="/" method="POST">
+    <form action="/results" method="POST">
       <input type="number" name="show_quantity">
       <input class="btn btn-primary" type="submit">
     </form>
-    <%= @show_quantity %>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
