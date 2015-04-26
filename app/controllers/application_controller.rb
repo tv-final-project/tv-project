@@ -16,22 +16,20 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/' do
-    @shows_array = params[:shows_array]
     @show_quantity = params[:show_quantity]
     erb :index
   end
 
   post '/shows' do
-    @shows_array = params[:shows_array]
     @show_quantity = params[:show_quantity]
-    @shows_name = params[:show_name]
     erb :shows
   end
 
   post '/results' do
-    @shows_array = params[:shows_array]
-    @show_quantity = params[:show_quantity]
-    @shows_name = params[:show_name]
+    @shows_array = []
+    params.each do |show_number, show|
+      @shows_array << show
+    end
     erb :results
   end
 

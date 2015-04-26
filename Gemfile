@@ -6,6 +6,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem 'bcrypt'
 gem "netflix_roulette"
+gem "vacuum"
 
 group :development do
   gem "sqlite3"
