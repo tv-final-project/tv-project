@@ -10,13 +10,13 @@
     <h1 style="font-size:50px;" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
 
 
-    <form action "/shows" method="POST">
+    <form action "/results" method="POST">
     <% @show_quantity.to_i.times do |i|%>
       <p>Show name: <input type="text" name="show_name[<%=i%>]"></p>
     <% end %>
     <input class="btn btn-primary" type="submit">
     </form>
-    <%= @show_name %>
+    <p><%= @shows_name %></p>
 
 
     </div>

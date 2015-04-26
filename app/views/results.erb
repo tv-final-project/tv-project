@@ -7,15 +7,10 @@
   </head>
   <body>
     <div class="container-full">
-    <h1 style="font-size:50px;" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
+    <h1 style="font-size:50px" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
 
-    <form action "/" method="POST">
-    <% @show_quantity.to_i.times do |i|%>
-      <p>Show name:<input type="text" name="show_name<%=i%>"></p>
-      <% @show_array << "@show_name<%=i%>" %>
-    <% end %>
-    <input class="btn btn-primary" type="submit">
-    </form>
+    <h2> Television Shows You Watch: </h2>
+    <%= @shows_name %>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

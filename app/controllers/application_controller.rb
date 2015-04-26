@@ -29,7 +29,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/results' do
-    erb :results.erb
+    @shows_array = params[:shows_array]
+    @show_quantity = params[:show_quantity]
+    @shows_name = params[:show_name]
+    erb :results
   end
 
 end
