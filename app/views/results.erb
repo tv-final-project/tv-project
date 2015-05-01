@@ -7,12 +7,52 @@
   </head>
   <body>
     <div class="container-full">
-    <h1 style="font-size:50px" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
+    <div class="row">
+      <h1 style="font-size:50px" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
 
-    <h2> Television Shows You Watch: </h2>
-     <% @shows_array.each do |show| %>
-      <%= show %>
-    <% end %>
+      <h2> Television Shows You Watch: </h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+      AmazonPrime:
+      <table border="1">
+        <% @shows_array.each do |show| %>
+          <tr>
+            <td><%= show %></td>
+            <td> <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+      <div class="col-xs-4">
+      Netflix:
+      <table border="1">
+        <% @shows_array.each do |show| %>
+          <tr>
+            <td><%= show %></td>
+            <td>
+            <%if NetflixRoulette.get_media_poster("#{show}") == "Unable to locate data" %>
+              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
+            <% else %>
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%">
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+      <div class="col-xs-4">
+      Hulu:
+      <table border="1">
+        <% @shows_array.each do |show| %>
+          <tr>
+            <td><%= show %></td>
+            <td> <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
