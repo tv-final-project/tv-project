@@ -26,10 +26,15 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/results' do
-    @shows_array = []
-    params.each do |show_number, show|
-      @shows_array << show
+    # @shows_array = []
+    # params.each do |show|
+    #   @shows_array << show
+    # end
+    my_show = Show.new
+    params.each_value do |show|
+      my_show.add_to_shows_array(show)
     end
+    @netflix = my_show.netflix_roulette
     erb :results
   end
 
