@@ -34,7 +34,9 @@ class ApplicationController < Sinatra::Base
     params.each_value do |show|
       my_show.add_to_shows_array(show)
     end
-    @netflix = my_show.netflix_roulette
+    @shows_array = my_show.shows_array
+    # @netflix = my_show.netflix_roulette
+    @itunes = my_show.itunes_api
     erb :results
   end
 

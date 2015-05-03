@@ -7,7 +7,7 @@ gem "rake"
 gem 'bcrypt'
 gem "netflix_roulette"
 # gem "vacuum"
-gem "hulu"
+gem "itunes-search-api"
 
 group :development do
   gem "sqlite3"

@@ -19,10 +19,16 @@ GEM
     bond (0.5.1)
     builder (3.2.2)
     coderay (1.1.0)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    itunes-search-api (0.1.0)
+      httparty
     json (1.8.2)
     method_source (0.8.2)
     minitest (5.5.1)
+    multi_xml (0.5.5)
     netflix_roulette (1.0.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -69,6 +75,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   bcrypt
+  itunes-search-api
   netflix_roulette
   pry
   rake

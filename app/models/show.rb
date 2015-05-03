@@ -1,7 +1,7 @@
 require './config/environment'
 
 class Show < ActiveRecord::Base
-  attr_accessor :netflix
+  attr_accessor :netflix, :itunes
 
   def initialize
     @shows_array = []
@@ -25,4 +25,17 @@ class Show < ActiveRecord::Base
       end
     end
   end
+
+  def itunes_api
+    @shows_array.each do |show|
+      if         
+       ITunesSearchAPI.search(:term => show, :country => "US", :media => "tvShow").empty?
+
+      else 
+        ITunesSearchAPI.search(:term => show, :country => "US", :media => "tvShow").first.has_value?(show)
+     end
+    end
+
+  end
+
 end
