@@ -1,4 +1,5 @@
 require './config/environment'
+require './app/models/show'
 require 'pry'
 
 

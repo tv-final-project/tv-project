@@ -1,11 +1,12 @@
 require './config/environment'
 
 class Show < ActiveRecord::Base
-  attr_accessor :netflix, :itunes
+  attr_accessor :netflix, :itunes_hash
 
   def initialize
     @shows_array = []
     @netflix = false
+    @itunes_hash = {}
   end
 
   def shows_array
@@ -28,14 +29,12 @@ class Show < ActiveRecord::Base
 
   def itunes_api
     @shows_array.each do |show|
-      if         
-       ITunesSearchAPI.search(:term => show, :country => "US", :media => "tvShow").empty?
-
-      else 
-        ITunesSearchAPI.search(:term => show, :country => "US", :media => "tvShow").first.has_value?(show)
-     end
+      if ITunesSearchAPI.search(:term => show, :country => "US", :media => "tvShow") == []
+        @itunes_hash[show] = false
+      else
+        @itunes_hash[show] = true
+      end
     end
-
+    binding.pry
   end
-
 end
