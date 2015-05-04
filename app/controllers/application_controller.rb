@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
       my_show.add_to_shows_array(show)
     end
     @shows_array = my_show.shows_array
-    # @netflix = my_show.netflix_roulette
+    @netflix = my_show.netflix_roulette
     @itunes = my_show.itunes_api
     erb :results
   end
