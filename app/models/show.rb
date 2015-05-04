@@ -35,6 +35,6 @@ class Show < ActiveRecord::Base
         @itunes_hash[show] = true
       end
     end
-    binding.pry
+    return @itunes_hash
   end
 end

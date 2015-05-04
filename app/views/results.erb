@@ -31,7 +31,7 @@
           <tr>
             <td><%= show.titleize %></td>
             <td>
-            <%if @itunes == false %>
+            <%if @itunes[show] == false %>
               <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
             <% else %>
               <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%">
