@@ -17,7 +17,7 @@
       <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
           <tr>
-            <td><%= show.titleize %></td>
+            <td style="border-bottom-width: 2px; border-bottom-color: white"><%= show.titleize %></td>
             <td><% if @google[show] == false %>
               <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="9%">
             <% else %>

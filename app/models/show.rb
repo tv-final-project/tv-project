@@ -15,7 +15,9 @@ class Show < ActiveRecord::Base
   end
 
   def add_to_shows_array(show)
-    @shows_array << show
+    if show != ""
+      @shows_array << show
+    end
   end
 
   def netflix_roulette

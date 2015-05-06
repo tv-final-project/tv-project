@@ -15,6 +15,16 @@ html {
 body {
   margin: 0;
 }
+table,th,td {
+  border-width: 2px;
+  border-color: white;
+}
+
+.border {
+  border-bottom-color: white;
+  border-bottom-width: 2px;
+}
+
 article,
 aside,
 details,
