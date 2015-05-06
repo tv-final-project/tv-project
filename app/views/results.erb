@@ -1,28 +1,27 @@
 <!doctype html>
 <html>
   <head>
-    <title>Flatiron Sinatra Project Template</title>
+    <title>Telly Search</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <div class="container">
     <div class="row">
-      <h1 style="font-size:50px" align="center"> AmazonPrime, Hulu, Netflix Comparison </h1>
+      <h1 style="font-size:50px" align="center"> GooglePlay, iTunes, Netflix Comparison </h1>
 
-      <h2> Television Shows You Watch: </h2>
     </div>
     <div class="row">
       <div class="col-xs-4">
       GooglePlay:
-      <table border="1">
+      <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
           <tr>
             <td><%= show.titleize %></td>
             <td><% if @google[show] == false %>
-              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
+              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="9%">
             <% else %>
-              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="9%"> </td>
             <% end %>
           </tr>
         <% end %>
@@ -30,15 +29,15 @@
       </div>
       <div class="col-xs-4">
       Itunes:
-      <table border="1">
+      <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
           <tr>
             <td><%= show.titleize %></td>
             <td>
             <%if @itunes[show] == false %>
-              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
+              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="9%">
             <% else %>
-              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%">
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="9%">
             <% end %>
             </td>
           </tr>
@@ -47,15 +46,15 @@
       </div>
       <div class="col-xs-4">
       Netflix:
-      <table border="1">
+      <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
           <tr>
             <td><%= show.titleize %></td>
             <td>
             <% if @netflix[show] == false %>
-              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
+              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="9%">
             <% else %>
-              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%">
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="9%">
             <% end %>
             </td>
           </tr>
