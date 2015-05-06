@@ -14,12 +14,16 @@
     </div>
     <div class="row">
       <div class="col-xs-4">
-      AmazonPrime:
+      GooglePlay:
       <table border="1">
         <% @shows_array.each do |show| %>
           <tr>
-            <td><%= show %></td>
-            <td> <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+            <td><%= show.titleize %></td>
+            <td><% if @google[show] == false %>
+              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
+            <% else %>
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+            <% end %>
           </tr>
         <% end %>
         </table>
@@ -51,8 +55,9 @@
             <% if @netflix[show] == false %>
               <img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" height="2%" width="5%">
             <% else %>
-              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%"> </td>
+              <img src="http://www.clker.com/cliparts/2/k/n/l/C/Q/transparent-green-checkmark-hi.png" height="2%" width="5%">
             <% end %>
+            </td>
           </tr>
         <% end %>
         </table>

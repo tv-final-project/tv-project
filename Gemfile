@@ -8,7 +8,9 @@ gem 'bcrypt'
 gem "netflix_roulette"
 # gem "vacuum"
 gem "itunes-search-api"
-gem 'amazon-ec2'
+# gem 'hulu-show', '~> 0.5.2'
+# gem 'amazon-ecs'
+gem 'google_play_search', '~> 0.0.11'
 
 group :development do
   gem "sqlite3"

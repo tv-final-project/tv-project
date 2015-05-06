@@ -7,6 +7,7 @@ class Show < ActiveRecord::Base
     @shows_array = []
     @netflix_hash = {}
     @itunes_hash = {}
+    @google_hash = {}
   end
 
   def shows_array
@@ -37,5 +38,31 @@ class Show < ActiveRecord::Base
       end
     end
     return @itunes_hash
+  end
+
+  # def hulu_api
+  #   @shows_array.each do |show|
+  #     show_variable = Hulu::Show.new(show)
+  #   end
+  # end
+
+
+  # def amazon_api
+  #   @shows_array.each do |show|
+  #     show_variable = Amazon::Ecs.item_search(show, :search_index => 'All')
+  #   end
+  #   binding.pry
+  # end
+
+  def google_api
+    @shows_array.each do |show|
+      gps = GooglePlaySearch::Search.new(:language=>"en", :category=>"movies")
+      if gps.search(show) == []
+        @google_hash[show] = false
+      else
+        @google_hash[show] = true
+      end
+    end
+    return @google_hash
   end
 end

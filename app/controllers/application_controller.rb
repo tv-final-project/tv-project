@@ -38,6 +38,9 @@ class ApplicationController < Sinatra::Base
     @shows_array = my_show.shows_array
     @netflix = my_show.netflix_roulette
     @itunes = my_show.itunes_api
+    # @hulu = my_show.hulu_api
+    # @amazon = my_show.amazon_api
+    @google = my_show.google_api
     erb :results
   end
 
