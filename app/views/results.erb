@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <title>Telly Search</title>
+    <title>Telequest</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body>
+  <body style="background-color:#14b3d9">
     <div class="container">
     <div class="row">
-      <h1 style="font-size:50px" align="center"> GooglePlay, iTunes, Netflix Comparison </h1>
+      <h1 style="font-size:100px" align="center"> Telequest </h1>
 
     </div>
     <div class="row">
-      <div class="col-xs-4">
+      <div style="font-size: 22px" class="col-xs-4">
       GooglePlay:
       <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
@@ -27,7 +27,7 @@
         <% end %>
         </table>
       </div>
-      <div class="col-xs-4">
+      <div style="font-size: 22px" class="col-xs-4">
       Itunes:
       <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>
@@ -44,7 +44,7 @@
         <% end %>
         </table>
       </div>
-      <div class="col-xs-4">
+      <div style="font-size: 22px" class="col-xs-4">
       Netflix:
       <table border="1" style="white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">
         <% @shows_array.each do |show| %>

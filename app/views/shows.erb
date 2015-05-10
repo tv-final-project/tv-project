@@ -1,20 +1,22 @@
 <!doctype html>
 <html>
   <head>
-    <title>Telly Search</title>
+    <title>Telequest</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body>
+  <body style="background-color:#14b3d9">
     <div class="container">
-    <h1 style="font-size:50px;" align="center"> GooglePlay, iTunes, Netflix Comparison </h1>
+    <h1 style="font-size:100px;" align="center"> Telequest </h1>
 
 
     <form action="/results" method="POST">
+    <center>
     <% @show_quantity.to_i.times do |i|%>
-      <p>Show name: <input type="text" name="shows_name<%=i%>"></p>
+      <p style="font-size: 25px; color: #8AD9EC">Show name: <input style="color: #14b3d9;" type="text" name="shows_name<%=i%>"></p>
     <% end %>
     <input class="btn btn-primary" type="submit">
+    </center>
     </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

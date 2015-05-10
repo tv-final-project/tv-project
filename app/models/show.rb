@@ -67,4 +67,7 @@ class Show < ActiveRecord::Base
     end
     return @google_hash
   end
+
+
+  
 end
